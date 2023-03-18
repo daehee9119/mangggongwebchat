@@ -1,2 +1,2 @@
-# mangggongwebchat
-chat room project for mangggong TV, running upon mobile web
+# mangggong-web-chat
+chat room project for [twitch Mang-ggong TV](https://www.twitch.tv/mangggong0831), running upon mobile web
