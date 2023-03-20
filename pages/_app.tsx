@@ -1,5 +1,4 @@
 import FullPageLoader from '@/components/global/FullPageLoader';
-import '@/styles/globals.css';
 import '@/styles/tailwind-global.css';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
@@ -31,7 +30,7 @@ const App = ({ Component, pageProps }: AppProps) => {
   return (
     <Fragment>
       <Head>
-        <title>맹꽁맹꽁 채팅방~</title>
+        <title>맹꽁맹꽁~</title>
       </Head>
       {loading ? <FullPageLoader /> : <Component {...pageProps} />}
     </Fragment>

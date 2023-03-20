@@ -5,7 +5,7 @@ const FullPageLoader = () => {
     <div className="fixed inset-0 z-10 flex h-full w-full items-center justify-center bg-blue-100/80">
       <div className="absolute h-[80px] w-[80px] sm:h-[150px] sm:w-[150px]">
         <Image
-          src="/images/loading_frog.gif"
+          src="/images/frog_jumping.gif"
           alt="loading..."
           fill
           sizes="100vw, 100hw"
