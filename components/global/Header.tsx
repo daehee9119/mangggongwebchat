@@ -1,6 +1,8 @@
-import mangGgongProfile from '@/public/images/mangggong_profile.png';
+import BurgerMenuIcon from '@/components/icons/BurgerMenuIcon';
+import mangggongProfile from '@/public/images/mangggong_profile.png';
 import clsx from 'clsx';
 import Image from 'next/image';
+import { useState } from 'react';
 
 interface IMenuItem {
   link: string;
@@ -14,28 +16,32 @@ const navigationConfiguration: Array<IMenuItem> = [
 ];
 
 const Header = () => {
-  const menuDecorationStyle = '';
+  const [openMobileMenu, setOpenMobileMenu] = useState<boolean>(false);
+
+  const mobileMenuHandler = () => {
+    setOpenMobileMenu(!openMobileMenu);
+  };
 
   return (
     <header className="box-border py-4 px-2 text-sm" data-testid={'menu-home'}>
-      <div className="relative mr-auto ml-auto w-full max-w-[1200px] px-[60px]">
+      <div className="common-container">
         <div className="flex flex-row flex-wrap items-center justify-between text-center">
           <div className="flex flex-row items-center">
-            <div className="h-32 w-32 overflow-hidden rounded-[70%]">
-              <a href="/" className="box-border flex">
+            <div className="h-6 w-6 overflow-hidden rounded-[70%] border-2 border-online hover:border-4 hover:transition-transform hover:duration-100 xs:h-24 xs:w-24 md:h-32 md:w-32">
+              <a href="/">
                 <Image
-                  src={mangGgongProfile}
+                  src={mangggongProfile}
                   alt="맹꽁"
                   style={{ objectFit: 'cover' }}
                   sizes="100vh, 100vw"
                 />
               </a>
             </div>
-            <span className="text-3xl">안녕? 나는 맹꽁</span>
+            <span className="ml-2 text-sm  sm:text-md">안녕? 나는 맹꽁</span>
           </div>
-          <div>
+          <div className="hidden md:block">
             {navigationConfiguration.length > 0 &&
-              navigationConfiguration.map((item: IMenuItem) => {
+              navigationConfiguration.map((item: IMenuItem, index) => {
                 return (
                   <div
                     className={clsx(
@@ -44,12 +50,13 @@ const Header = () => {
                       'box-border',
                       'inline-block',
                       'text-center',
-                      'text-[36px]',
                       'font-bold',
-                      'text-frog-color',
+                      'text-frog',
                       'md:my-2',
-                      'md:text-[48px]',
+                      'xl:text-xl',
+                      'md:text-md',
                     )}
+                    key={index}
                   >
                     <a href={item.link}>
                       <span className="menu-item-text">{item.title}</span>
@@ -57,6 +64,9 @@ const Header = () => {
                   </div>
                 );
               })}
+          </div>
+          <div className="block md:hidden" onClick={mobileMenuHandler}>
+            <BurgerMenuIcon />
           </div>
         </div>
       </div>

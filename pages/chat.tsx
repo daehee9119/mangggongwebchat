@@ -1,4 +1,4 @@
-import Chatting from '@/components/view/chat/Chatting';
+import Chatting from '@/components/view/Chatting';
 
 const Chat = () => {
   return <Chatting />;

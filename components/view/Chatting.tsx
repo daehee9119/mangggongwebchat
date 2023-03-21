@@ -63,21 +63,26 @@ const Chatting = () => {
     <div className="flex h-screen w-full flex-col">
       <div className="sticky top-0 bg-blue-500 py-4 text-white">
         <h1 className="text-center text-2xl font-semibold">맹꽁과 트수들</h1>
-        <h2 className="mt-2 text-center">맹꽁맹꽁..나는 비가 오면 울어..</h2>
+        <h2 className="mt-2 text-center text-xl">맹꽁맹꽁..나는 비가 오면 울어..</h2>
       </div>
       <div className="flex flex-1 flex-col bg-gray-200">
-        <div className="flex-1 p-4 font-mono">
+        <div className="flex-1 p-4 text-md">
           {chat.length ? (
             chat.map((chat, index) => (
               <div key={['msg_', index].join(' ')} className="mt-1">
-                <span className={clsx({ 'text-red-500': chat.user === user }, 'text-black')}>
+                <span
+                  className={clsx(
+                    { 'text-red-500': chat.user === user },
+                    'font-semibold text-black',
+                  )}
+                >
                   {chat.user === user ? 'Me' : chat.user}
                 </span>
                 : {chat.message}
               </div>
             ))
           ) : (
-            <div className="text-grey-400 py-6 text-center text-sm">No chat messages before</div>
+            <div className="text-grey-400 py-6 text-center text-xl">No chat messages before</div>
           )}
         </div>
         <div className="sticky bottom-0 h-20 bg-gray-400 p-4">

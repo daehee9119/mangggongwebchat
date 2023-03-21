@@ -15,10 +15,18 @@
     }
 
     body {
-        @apply font-NanumGeumunbohwa text-base;
+        @apply font-NanumGeumunbohwa text-base m-0 p-0 border-none outline-0 bg-white overflow-x-hidden;
+    }
+
+    .common-container {
+        @apply relative mr-auto ml-auto w-full max-w-[1200px] py-0 px-[18px] md:max-w-[calc(100%-38px)] lg:max-w-[calc(100%-68px)] lg:px-[30px]
     }
 
     .menu-item-text {
         @apply transition-all duration-300 ease-in-out hover:text-menu-hover hover:underline hover:decoration-wavy hover:decoration-menu-hover
+    }
+
+    .right-block-container {
+        @apply relative px-0 pt-[4rem] pb-[3rem] md:pt-[8rem] md:pb-[6rem] lg:pt-[10rem] lg:pb-[8rem]
     }
 }
