@@ -37,7 +37,7 @@ const Header = () => {
                 />
               </a>
             </div>
-            <span className="ml-2 text-sm  sm:text-md">안녕? 나는 맹꽁</span>
+            <span className="ml-2 text-sm  md:text-md">안녕? 나는 맹꽁</span>
           </div>
           <div className="hidden md:block">
             {navigationConfiguration.length > 0 &&
@@ -53,8 +53,9 @@ const Header = () => {
                       'font-bold',
                       'text-frog',
                       'md:my-2',
-                      'xl:text-xl',
-                      'md:text-md',
+                      'sm:text-md',
+                      'md:text-lg',
+                      'lg:text-xl',
                     )}
                     key={index}
                   >
