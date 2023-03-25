@@ -5,7 +5,16 @@
 @font-face {
     font-family: "NanumGeumunbohwa";
     src: url("../public/fonts/NanumGeumunbohwa.ttf");
+}
 
+@font-face {
+    font-family: "UhBeeGmin2";
+    src: url("../public/fonts/UhBee-Gmin2.ttf");
+}
+
+@font-face {
+    font-family: "UhBeeGmin2Bold";
+    src: url("../public/fonts/UhBee-Gmin2-Bold.ttf");
 }
 
 @layer base {
@@ -15,7 +24,7 @@
     }
 
     body {
-        @apply font-NanumGeumunbohwa text-base m-0 p-0 border-none outline-0 bg-white overflow-x-hidden;
+        @apply font-UhBeeGmin2 text-base m-0 p-0 border-none outline-0 bg-white overflow-x-hidden;
     }
 
     .common-container {
@@ -28,5 +37,9 @@
 
     .right-block-container {
         @apply relative px-0 pt-[4rem] pb-[3rem] md:pt-[8rem] md:pb-[6rem] lg:pt-[10rem] lg:pb-[8rem]
+    }
+
+    .middle-block-container {
+        @apply relative flex justify-center px-0 pt-[5.5rem] text-center lg:pt-[7.5rem] lg:pb-[3rem]
     }
 }

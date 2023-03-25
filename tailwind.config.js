@@ -6,6 +6,8 @@ module.exports = {
     extend: {
       fontFamily: {
         NanumGeumunbohwa: ['NanumGeumunbohwa', 'sans-serif'],
+        UhBeeGmin2: ['UhBeeGmin2', 'sans-serif'],
+        UhBeeGmin2Bold: ['UhBeeGmin2Bold', 'sans-serif'],
       },
       fontSize: {
         xxs: ['12px', '16px'],
@@ -29,6 +31,16 @@ module.exports = {
         frog: '#4D7D53',
         'frog-light': '#96C76A',
         online: '#ADFF8D',
+        'twitch-purple': '#6441A5',
+        shadow: 'rgba(42, 0, 122, 0.4)',
+        'button-border': 'rgb(237, 243, 245)',
+        'youtube-red': '#FF0000',
+        'youtube-black': '#282828',
+        'discord-blue': '#7289DA',
+        'title-black': '#404041',
+      },
+      boxShadow: {
+        normal: '0 16px 30px rgb(23 31 114 / 20%)',
       },
     },
   },
