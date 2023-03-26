@@ -30,7 +30,7 @@ const MobileMenu = (props: { children?: ReactNode; menuHandler: () => void }) =>
           }}
         >
           <div
-            className="relative flex h-full w-[90%] flex-col bg-white p-6 pt-[1.5rem] text-left"
+            className="relative flex h-full w-[256px] flex-col bg-white p-6 pt-[1.5rem] text-left"
             onClick={(e) => {
               e.stopPropagation();
             }}

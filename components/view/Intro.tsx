@@ -18,14 +18,20 @@ const Intro = () => {
   return (
     <section id="intro" className="right-block-container" data-testid="intro-container">
       <Fade direction="right">
-        <div className="flex  justify-between align-middle">
+        <div className="flex justify-between align-middle">
           <div className="relative w-1/2 pb-[4rem]">
-            <h6 className="font-UhBeeGmin2Bold text-lg leading-[1.18] text-frog-light sm:text-xl md:text-2xl">
+            <h6
+              className="font-UhBeeGmin2Bold text-lg leading-[1.18] text-frog-light sm:text-xl md:text-2xl"
+              data-testid="intro-title"
+            >
               맹꽁이와 함께
               <br />
               세상을 탐험해봐요!
             </h6>
-            <p className="mx-0 mt-[1.5rem] mb-[2rem] text-[21px] leading-[1.41] text-frog">
+            <p
+              className="mx-0 mt-[1.5rem] mb-[2rem] text-[21px] leading-[1.41] text-frog"
+              data-testid="intro-content"
+            >
               트위치 스트리머 맹꽁은 비가 오면 울지만 그것은 맹꽁이 있는 현재 위치 기준이랍니다.
               <br />
               그리고 맹꽁은 3자매 중 막내여서 집안에서 완전 아가 취급 받고 다닌답니다?
@@ -36,7 +42,13 @@ const Intro = () => {
               <a href="https://twitch.tv/mangggong0831" target={'_blank'}>
                 <button className="mt-[0.625rem] ml-[20px] flex w-[200px] max-w-[180px] flex-wrap justify-center rounded bg-twitch-purple py-[13px] px-0 align-middle shadow-normal transition-all duration-300 ease-in-out hover:bg-frog-light lg:max-w-full">
                   <div className="mt-[2px]">
-                    <Image src={TwitchIcon} alt="twitch icon" width={20} height={20} />
+                    <Image
+                      src={TwitchIcon}
+                      alt="twitch icon"
+                      width={20}
+                      height={20}
+                      data-testid="intro-picture"
+                    />
                   </div>
                   <span className="ml-2 font-UhBeeGmin2Bold text-[1rem] text-white">TWITCH</span>
                 </button>

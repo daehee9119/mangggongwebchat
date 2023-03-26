@@ -1,6 +1,6 @@
 FROM node:16-slim AS builder
 
-EXPOSE 4001
+EXPOSE 3000
 
 WORKDIR /usr/src/app/
 
